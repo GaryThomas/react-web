@@ -1,4 +1,2 @@
-function greeter () {
-  document.write('Hello');
-}
+var greeter = require('./components/Greeter');
 greeter();
