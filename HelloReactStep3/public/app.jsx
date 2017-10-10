@@ -1,14 +1,16 @@
 var Greeter = React.createClass({
   getDefaultProps: function () {
     return {
-      name: 'REACT'
+      name: 'REACT',
+      message: 'Default message'
     };
   },
   render: function () {
-    var name = this.props.name;
+    var {name, message} = this.props;
     return (
       <div>
         <h1>Hello {name} (using components)</h1>
+        <p>{message}</p>
       </div>
     );
   }
