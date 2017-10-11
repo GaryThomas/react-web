@@ -1,11 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var BoilerPlate = require('Components/BoilerPlate');
+var Main = require('Components/Main');
 
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={BoilerPlate}>
+    <Route path="/" component={Main}>
 
     </Route>
   </Router>,
