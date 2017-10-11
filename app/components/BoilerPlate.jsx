@@ -1,26 +1,12 @@
 var React = require('react');
+var Nav = require('Components/Nav');
 
 var BoilerPlate = React.createClass({
-  getDefaultProps: function () {
-    return {
-      name: 'REACT',
-      message: 'Default message'
-    };
-  },
-  getInitialState: function () {
-    return {
-      name: this.props.name,
-      message: this.props.message,
-    };
-  },
-  handleUpdates: function (updates) {
-    this.setState(updates);
-  },
   render: function () {
-    var {name, message} = this.state;
     return (
       <div>
-        <h1>Some Boiler Plate</h1>
+        <h1>Main Component</h1>
+        <Nav />
       </div>
     );
   }
