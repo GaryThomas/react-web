@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './public/app.jsx',
+    entry: './app/app.jsx',
     output: {
       path: __dirname,
       filename: './public/bundle.js'
@@ -12,9 +12,9 @@ module.exports = {
         'node_modules'
       ],
       alias: {
-        Greeter: 'public/components/Greeter.jsx',
-        GreeterMessage: 'public/components/GreeterMessage.jsx',
-        GreeterForm: 'public/components/GreeterForm.jsx',
+        Greeter: 'app/components/Greeter.jsx',
+        GreeterMessage: 'app/components/GreeterMessage.jsx',
+        GreeterForm: 'app/components/GreeterForm.jsx',
       },
       extensions: ['.js', '.jsx']
     },
@@ -28,7 +28,7 @@ module.exports = {
           test: /\.jsx$/,
           exclude: /(node_modules|bower_components)/,
           include: [
-            path.resolve(__dirname, 'public'),
+            path.resolve(__dirname, 'app'),
             path.resolve(__dirname, 'components'),
           ],
         }
