@@ -12,7 +12,7 @@ module.exports = {
         'node_modules'
       ],
       alias: {
-        BoilerPlate: 'app/components/BoilerPlate.jsx',
+        Components: path.resolve(__dirname, 'app/components'),
       },
       extensions: ['.js', '.jsx']
     },
