@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: './public/app.jsx',
     output: {
@@ -15,7 +17,11 @@ module.exports = {
             presets: ['react', 'es2015']
           },
           test: /\.jsx$/,
-          exclude: /(node_modules|bower_components)/
+          exclude: /(node_modules|bower_components)/,
+          include: [
+            path.resolve(__dirname, 'public'),
+            path.resolve(__dirname, 'components'),
+          ],
         }
       ]
     }
