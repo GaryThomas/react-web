@@ -1,7 +1,7 @@
 {
-  "name": "hello-react-step1",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple React app using webpack & babel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
