@@ -12,9 +12,7 @@ module.exports = {
         'node_modules'
       ],
       alias: {
-        Greeter: 'app/components/Greeter.jsx',
-        GreeterMessage: 'app/components/GreeterMessage.jsx',
-        GreeterForm: 'app/components/GreeterForm.jsx',
+        BoilerPlate: 'app/components/BoilerPlate.jsx',
       },
       extensions: ['.js', '.jsx']
     },

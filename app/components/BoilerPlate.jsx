@@ -1,8 +1,6 @@
 var React = require('react');
-var GreeterMessage = require('GreeterMessage');
-var GreeterForm = require('GreeterForm');
 
-var Greeter = React.createClass({
+var BoilerPlate = React.createClass({
   getDefaultProps: function () {
     return {
       name: 'REACT',
@@ -22,11 +20,10 @@ var Greeter = React.createClass({
     var {name, message} = this.state;
     return (
       <div>
-        <GreeterMessage name={name} message={message}/>
-        <GreeterForm onUpdates={this.handleUpdates}/>
+        <h1>Some Boiler Plate</h1>
       </div>
     );
   }
 });
 
-module.exports = Greeter;
+module.exports = BoilerPlate;

@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('Greeter');
+var BoilerPlate = require('BoilerPlate');
 
 ReactDOM.render(
-  <Greeter name="React World"/>,
+  <BoilerPlate name="React World"/>,
   document.getElementById('app')
 );
