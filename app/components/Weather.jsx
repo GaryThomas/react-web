@@ -1,6 +1,7 @@
 var React = require('react');
 var WeatherForm = require('Components/WeatherForm');
 var WeatherMessage  = require('Components/WeatherMessage');
+var openWeatherMap = require('Api/openWeatherMap');
 
 var Weather = React.createClass({
   getInitialState: function () {
@@ -10,10 +11,16 @@ var Weather = React.createClass({
     }
   },
   handleSearch: function (location) {
-    alert(location);
-    this.setState({
-      location: location,
-      temp: 24
+    // Note: this is an asynchronous call which returns a promise
+    // It also messes up 'this' which needs to be cached
+    var that = this;
+    openWeatherMap.getTemp(location).then(function (temp) {
+      that.setState({
+        location: location,
+        temp: temp
+      });
+    }, function (err) {
+      alert(err);
     });
   },
   render: function () {

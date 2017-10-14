@@ -9,6 +9,7 @@
   "author": "Gary Thomas",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.16.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
