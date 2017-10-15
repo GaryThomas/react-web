@@ -11,7 +11,7 @@ app.use(function (req, res, next) {
     } else {
       res.redirect('http://' + res.hostname + res.url);
     }
-};
+});
 
 app.use(express.static('public'));
 app.listen(port, function () {
