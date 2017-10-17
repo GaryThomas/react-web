@@ -12,9 +12,9 @@ module.exports = {
         } else {
           return res.data.main.temp;
         }
-      }, function (err) {
-        // alert(err);
-        throw new Error(err.data.message);
+      }).catch (function (err) {
+        console.log(err.message);
+        throw new Error(err.message);
       });
     }
 };
