@@ -23,13 +23,16 @@ var Weather = React.createClass({
         isLoading: false
       });
     }, function (e) {
-      console.log('testing');
-
-      console.log('result: ' + e);
-      // that.setState({
-      //   isLoading: false,
-      //   errorMessage: e.message
-      // });
+      // if (e) {
+      //   console.log('result: ' + e);
+      // } else {
+      //   console.log('"e" is not defined');
+      // }
+      console.log('skipped');
+      that.setState({
+        isLoading: false,
+        errorMessage: 'e.message'
+      });
     });
   },
   render: function () {
@@ -44,7 +47,10 @@ var Weather = React.createClass({
     function renderError() {
       if (errorMessage) {
         return (
-          <ErrorModal/>
+          <div>
+            <h3>Showing an error</h3>
+            <ErrorModal/>
+          </div>          
         )
       }
     }
@@ -52,7 +58,8 @@ var Weather = React.createClass({
       <div>
         <h1 className="text-center">Get Weather</h1>
         <WeatherForm onSearch={this.handleSearch}/>
-        {renderMessage()}
+          {renderMessage()}
+          {renderError()}
       </div>
     );
   }
