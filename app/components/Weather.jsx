@@ -15,7 +15,11 @@ var Weather = React.createClass({
     // Note: this is an asynchronous call which returns a promise
     // It also messes up 'this' which needs to be cached
     var that = this;
-    this.setState({isLoading: true});
+    this.setState({
+      isLoading: true,
+      errorMessage: undefined,
+      temp: undefined
+    });
     openWeatherMap.getTemp(location).then(function (temp) {
       that.setState({
         location: location,
@@ -31,7 +35,6 @@ var Weather = React.createClass({
   },
   render: function () {
     var {temp, location, isLoading, errorMessage} = this.state;
-    var this_ = this;
     function renderMessage() {
       if (isLoading) {
         return (<h3 className="text-center">Stand by - fetching weather</h3>);
@@ -41,10 +44,6 @@ var Weather = React.createClass({
     }
     function renderError() {
       if (errorMessage) {
-        this_.setState({
-          errorMessage: undefined,
-          location: undefined
-        });
         return (
           <div>
             <ErrorModal notice={"Can't get weather"} errorMessage={errorMessage.message}/>
