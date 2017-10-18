@@ -22,16 +22,10 @@ var Weather = React.createClass({
         temp: temp,
         isLoading: false
       });
-    }, function (e) {
-      // if (e) {
-      //   console.log('result: ' + e);
-      // } else {
-      //   console.log('"e" is not defined');
-      // }
-      console.log('skipped');
+    }).catch(function (e) {
       that.setState({
         isLoading: false,
-        errorMessage: 'e.message'
+        errorMessage: e
       });
     });
   },
@@ -46,11 +40,12 @@ var Weather = React.createClass({
     }
     function renderError() {
       if (errorMessage) {
+        console.log(errorMessage.message);
         return (
           <div>
             <h3>Showing an error</h3>
-            <ErrorModal/>
-          </div>          
+            <ErrorModal errorMessage={'errorMessage'}/>
+          </div>
         )
       }
     }
