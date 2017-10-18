@@ -13,7 +13,6 @@ module.exports = {
           return res.data.main.temp;
         }
       }).catch (function (err) {
-        console.log(err.message);
         throw new Error(err.message);
       });
     }
