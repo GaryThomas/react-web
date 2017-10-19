@@ -28,6 +28,7 @@ module.exports = {
       alias: {
         Components: path.resolve(__dirname, 'app/components'),
         Api: path.resolve(__dirname, 'app/api'),
+        Styles: path.resolve(__dirname, 'app/styles'),
       },
       extensions: ['.js', '.jsx']
     },
