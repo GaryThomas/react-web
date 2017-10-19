@@ -9,6 +9,8 @@ var Examples = React.createClass({
         <p>Here are a few examples to try:</p>
         <ol>
           <li><Link to="/?location=Denver">Denver, Colorado</Link></li>
+          <li><Link to="/?location=Alicante,es">Alicante, SPAIN</Link></li>
+          <li><Link to="/?location=Siem Reap">Siem Reap, CAMBODIA</Link></li>
         </ol>
       </div>
     );

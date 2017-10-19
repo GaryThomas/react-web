@@ -4,7 +4,11 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   handleSearch: function (e) {
     e.preventDefault();
-    alert('Search not implemented');
+    var location = encodeURIComponent(this.refs.location.value);
+    if (location.length > 0) {
+      this.refs.location.value = '';
+      window.location.hash = "#/?location=" + location;
+    }
   },
   render: function () {
     return (
@@ -27,7 +31,7 @@ var Nav = React.createClass({
           <form onSubmit={this.handleSearch}>
             <ul className="menu">
               <li>
-                <input type="search" placeholder="City?" ref="city" />
+                <input type="search" placeholder="City?" ref="location" />
               </li>
               <li>
                 {/* Use foundation styled button
