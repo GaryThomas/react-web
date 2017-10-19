@@ -1,5 +1,11 @@
 var React = require('react');
 
+//
+// Note: if this has problems with complaints about DOM being manipulated,
+// look at video #60 for a possible solution.  I'm not seeing this, so I
+// didn't bother...
+//
+
 var ErrorModal = React.createClass({
   componentDidMount: function () {
     var modal = new Foundation.Reveal($('#error-modal'));
