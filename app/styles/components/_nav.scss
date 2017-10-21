@@ -1,0 +1,16 @@
+// Navigation specific styling
+
+// Colors
+$nav-background: $grey;
+$nav-text-color: white;
+
+// Update menu bar
+.top-bar, .top-bar ul {
+  background-color: $nav-background;
+}
+
+.top-bar {
+  .menu-text {
+    color: $nav-text-color;
+  }
+}
