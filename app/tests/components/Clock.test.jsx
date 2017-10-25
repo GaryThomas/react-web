@@ -2,7 +2,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var expect = require('expect');
-// var $ = require('jQuery');
+var $ = require('jquery');
 var TestUtils = require('react-addons-test-utils');
 
 // Component under test
@@ -13,6 +13,14 @@ describe('Clock', () => {
     expect(Clock).toExist();
   });
   // Component sub-tests
+  describe('rendering', () => {
+    it('show "01:02"', () => {
+      var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
+      var $el = $(ReactDOM.findDOMNode(clock));
+      var resText = $el.find(".clock-time").text();
+      expect(resText).toBe('01:02');
+    });
+  });
   describe('format seconds', () => {
     var clock = TestUtils.renderIntoDocument(<Clock/>);
     var seconds = 609;
